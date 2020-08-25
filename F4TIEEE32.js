@@ -34,5 +34,11 @@ z = '.';
 var mantissa = LeftofPoint.concat(z);
 mantissa = mantissa.concat(RightofPoint);
 mantissa = convert(mantissa);
-msg.payload=mantissa;
+z = '-';
+if (sign == '1'){
+    var FinalResult = z.concat(mantissa);}
+if (sign == '0'){
+    var FinalResult = mantissa;
+}
+msg.payload=FinalResult;
 return msg;
